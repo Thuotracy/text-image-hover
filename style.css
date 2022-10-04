@@ -11,7 +11,7 @@
 }
 
 html::-webkit-scrollbar{
-    width: 20px;
+    width: 10px;
 }
 
 html::-webkit-scrollbar-track{
@@ -19,7 +19,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background: white;
+    background: blue;
 }
 
 body{
@@ -36,22 +36,36 @@ body{
 }
 
 .container .text{
-    color: #fff3;
+    color: blue;
     font-size: 5em;
-    padding: 30px;
+    padding: 40px;
     cursor: pointer;
+    text-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+.container .text:hover{
+    color: rgba(0, 0, 255, 0.667);
+    position: relative;
+    z-index: 100;
+}
+
+.container .text:hover ~ .hover-img{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .hover-img{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.5);
+    opacity: 0;
     pointer-events: none;
     z-index: 10;
 }
 
 img{
-    width: 650px;
-    height: 450px;
+    width: 430px;
+    height: 230px;
+    object-fit: cover;
 }

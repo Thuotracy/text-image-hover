@@ -21,7 +21,25 @@
         <h1 class="text" data-src="images/paris.jpg">Paris</h1>
 
 
-        <img src="images/bali.jpg" class="hover-img" alt="">
+        <img src="images/nairobi.jpg" class="hover-img" alt="">
     </div>
+
+    <script>
+        let container = document.querySelector('.container');
+        let img = container.querySelector('.hover-img');
+
+        document.body.onmousemove = (e) =>{
+            let x = e.pageX;
+            let y = e.pageY;
+            img.style.top = y + 'px';
+            img.style.left = x + 'px';
+        }
+
+        container.querySelectorAll('.text').forEach(text =>{
+            text.onmousemove = () =>{
+                img.src = text.getAttribute('data-src');
+            }
+        });
+    </script>
 </body>
 </html>
