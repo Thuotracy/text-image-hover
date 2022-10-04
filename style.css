@@ -25,3 +25,33 @@ html::-webkit-scrollbar-thumb{
 body{
     background: black;
 }
+
+.container{
+    padding: 9%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.container .text{
+    color: #fff3;
+    font-size: 5em;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.hover-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+img{
+    width: 650px;
+    height: 450px;
+}
